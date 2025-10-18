@@ -1,0 +1,9 @@
+<section class="reports">
+  <h2>Reports</h2>
+  <p *ngIf="loadedPreviously; else firstLoad">
+    This page has been requested before; the feature flag was already marked as loaded.
+  </p>
+  <ng-template #firstLoad>
+    <p>This is the first time the lazy loaded route has initialized.</p>
+  </ng-template>
+</section>
